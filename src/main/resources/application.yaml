@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: step07_cicd
+
+server:
+  port: 8080
+
+debug: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - prometheus
+          - health
+          - metrics
+  prometheus:
+    metrics:
+      export:
+        enabled: true
